@@ -1,0 +1,87 @@
+import turtle
+import random as r
+
+def draw_rectangle(length, width):
+    
+    turtle.pu()
+    turtle.setpos(length*r.randint(-1,1),width*r.randint(-1,1))
+    turtle.pd()
+    turtle.color((r.randint(50,255),r.randint(0,50),r.randint(0,25)))
+    turtle.begin_fill()
+    turtle.left(r.randint(0,90))
+    for i in range(0,2): 
+        turtle.forward(length)
+        turtle.right(90)
+        turtle.forward(width)
+        turtle.right(90)
+    turtle.end_fill()
+
+def draw_leaf(s):
+  #stem
+    turtle.penup()
+    turtle.color((r.randint(50,255),r.randint(0,50),r.randint(0,25)))
+    turtle.begin_fill()
+    #turtle.left(r.randint(0,90))
+    turtle.setpos(0,-300/s)
+    turtle.pendown()
+    turtle.forward(25/s)
+    turtle.left(95)
+    turtle.forward(150/s)
+  #first leaf part
+    turtle.right(100)
+    turtle.forward(200/s)
+    turtle.left(140)
+    turtle.forward(30/s)
+    turtle.right(90)
+    turtle.forward(200/s)
+  #start of triple point
+    turtle.left(120)
+    turtle.forward(50/s)
+    turtle.right(85)
+    turtle.forward(100/s)
+    turtle.left(120)
+    turtle.forward(100/s)
+    turtle.right(60)
+    turtle.forward(50/s)
+    turtle.left(100)
+    turtle.forward(100/s)
+  #Start of last leaf section
+    turtle.right(155)
+    turtle.forward(200/s)
+    turtle.left(120)
+    turtle.forward(80/s)
+    turtle.right(80)
+    turtle.forward(111/s)
+  #halfway
+    turtle.setpos(0,-300/s)
+    turtle.left(55)
+    turtle.forward(25/s)
+    turtle.right(95)
+    turtle.forward(150/s)
+  #first leaf part
+    turtle.left(100)
+    turtle.forward(200/s)
+    turtle.right(140)
+    turtle.forward(30/s)
+    turtle.left(90)
+    turtle.forward(200/s)
+  #start of triple point
+    turtle.right(120)
+    turtle.forward(50/s)
+    turtle.left(85)
+    turtle.forward(100/s)
+    turtle.right(120)
+    turtle.forward(100/s)
+    turtle.left(60)
+    turtle.forward(50/s)
+    turtle.right(100)
+    turtle.forward(100/s)
+  #Start of last leaf section
+    turtle.left(155)
+    turtle.forward(200/s)
+    turtle.right(120)
+    turtle.forward(80/s)
+    turtle.left(80)
+    turtle.forward(111/s)
+    turtle.ht()
+    turtle.end_fill()
